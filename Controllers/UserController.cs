@@ -79,7 +79,7 @@ namespace WellaMvc.Controllers
                 return View(user);
             }
 
-            var userFromDb = _context.UserDataTable.Find(ID);
+            var userFromDb = _context.UserDataTable.FindAsync(ID);
         
             return View(userFromDb);
         }
@@ -90,7 +90,7 @@ namespace WellaMvc.Controllers
         public async Task<IActionResult> DeleteUser(int ID){
             var item = _context.UserDataTable.Find(ID);
             // var item = _context.UserDataTable.FirstOrDefaultAsync(x => x.ID == ID);
-            if( item != null ){
+            if( item == null ){
                 return View(item);
                
             }
