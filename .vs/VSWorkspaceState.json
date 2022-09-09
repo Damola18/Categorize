@@ -3,8 +3,8 @@
     "",
     "\\Controllers",
     "\\DatabaseContext",
+    "\\Views",
     "\\Views\\User"
   ],
-  "SelectedNode": "\\WellaMvc.csproj",
   "PreviewInSolutionExplorer": false
 }
